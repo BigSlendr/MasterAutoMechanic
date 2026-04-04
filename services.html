@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Master Auto Mechanic services: diagnostics, NY State inspection, brake service, oil changes, transmission work, and more in Staten Island."
+    />
+    <meta property="og:title" content="Services | Master Auto Mechanic" />
+    <meta property="og:description" content="Premium auto repair and maintenance services in Staten Island." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <script id="local-business-schema" type="application/ld+json"></script>
+    <title>Services | Master Auto Mechanic</title>
+  </head>
+  <body data-page-title="Services">
+    <div class="site-header-wrap"><header id="site-header" class="container"></header></div>
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">Auto Repair in Staten Island</p>
+        <h1>Complete Services for Reliable Everyday Driving</h1>
+        <p>
+          From brake service Staten Island drivers depend on to engine diagnostics and routine maintenance,
+          we provide workmanship designed for long-term reliability.
+        </p>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <h2 class="section-title">Our Core Services</h2>
+          <div class="grid-3" id="services-page-grid"></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="grid-2">
+          <article class="dark-block reveal">
+            <h3>Need help choosing a service?</h3>
+            <p>Tell us the symptoms, warning lights, or driving concerns and we’ll guide you to the right next step.</p>
+            <a class="btn btn-primary" data-phone-link></a>
+          </article>
+          <article class="dark-block reveal">
+            <h3>Need something else?</h3>
+            <p>Call us for general auto repair. If it affects safety or performance, we can help you diagnose and fix it.</p>
+            <a class="btn btn-secondary" href="contact.html">Request Service</a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="container" id="site-footer"></footer>
+    <div class="mobile-cta" id="mobile-cta"></div>
+
+    <script type="module" src="app.js"></script>
+    <script type="module">
+      import { siteConfig } from './data/siteConfig.js';
+      document.querySelectorAll('[data-phone-link]').forEach((el) => (el.textContent = siteConfig.primaryCtaLabel));
+    </script>
+  </body>
+</html>
