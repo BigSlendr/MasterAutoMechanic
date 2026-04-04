@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Master Auto Mechanic in Staten Island for diagnostics, inspections, brake service, and general auto repair."
+    />
+    <meta property="og:title" content="Contact | Master Auto Mechanic" />
+    <meta property="og:description" content="Call or request service with Staten Island's trusted local mechanic team." />
+    <link rel="stylesheet" href="styles.css" />
+    <script id="local-business-schema" type="application/ld+json"></script>
+    <title>Contact | Master Auto Mechanic</title>
+  </head>
+  <body data-page-title="Contact">
+    <div class="site-header-wrap"><header id="site-header" class="container"></header></div>
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">Schedule Service With Confidence</p>
+        <h1>Contact Your Staten Island Mechanic Team</h1>
+        <p>
+          Call for immediate help or send a request online. We’ll follow up quickly to confirm your service,
+          answer questions, and get you back on the road.
+        </p>
+      </section>
+
+      <section class="section section-light">
+        <div class="container grid-2">
+          <article class="contact-card reveal">
+            <h2>Visit or Call</h2>
+            <p><strong data-business-name></strong></p>
+            <p><span data-address-line1></span><br/><span data-city-state-zip></span></p>
+            <p><a data-phone-link></a></p>
+            <p><a data-email-link></a></p>
+            <ul class="hours-list" id="hours-list"></ul>
+            <p style="margin-top:1rem"><a class="btn btn-primary" data-map-link target="_blank" rel="noopener noreferrer">Get Directions</a></p>
+          </article>
+
+          <article class="dark-block reveal">
+            <h2>Request Service</h2>
+            <form id="request-form" novalidate>
+              <div class="form-grid">
+                <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+                <label>Phone<input type="tel" name="phone" autocomplete="tel" required /></label>
+                <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+                <label>Vehicle Make/Model<input type="text" name="vehicle" required /></label>
+                <label>Service Needed
+                  <select id="service-needed" name="service" required>
+                    <option value="">Select a service</option>
+                  </select>
+                </label>
+                <label>Preferred Date<input type="date" name="preferredDate" /></label>
+              </div>
+              <label>Message<textarea name="message" placeholder="Tell us about any symptoms, warning lights, or concerns."></textarea></label>
+              <button type="submit" class="btn btn-primary">Request Service</button>
+              <p id="form-notice" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="dark-block reveal">
+          <h2>Map Placeholder</h2>
+          <p>Embed your preferred map provider here for direct in-page directions and location confirmation.</p>
+          <p><a class="btn btn-outline" data-map-link target="_blank" rel="noopener noreferrer">Open in Maps</a></p>
+        </div>
+      </section>
+    </main>
+    <footer class="container" id="site-footer"></footer>
+    <div class="mobile-cta" id="mobile-cta"></div>
+
+    <script type="module" src="app.js"></script>
+    <script type="module">
+      import { siteConfig } from './data/siteConfig.js';
+      document.querySelectorAll('[data-phone-link]').forEach((el) => {
+        if (!el.textContent.trim()) el.textContent = siteConfig.phoneDisplay;
+      });
+    </script>
+  </body>
+</html>
