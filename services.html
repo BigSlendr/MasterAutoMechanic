@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Auto Mechanic | Services</title>
+    <meta name="description" content="From routine maintenance to complex repairs, Master Auto Mechanic handles it all for Staten Island drivers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { 'brand-red': '#B91C1C' }, fontFamily: { headline: ['Barlow Condensed', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-body bg-white text-gray-800">
+    <header class="bg-gray-900 text-white sticky top-0 z-20">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-headline text-3xl font-black tracking-wide">Master Auto Mechanic</a>
+        <div class="flex gap-5 text-sm sm:text-base font-semibold">
+          <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="services.html">Services</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="bg-brand-red py-14 px-4 text-white">
+      <div class="max-w-6xl mx-auto">
+        <p class="text-red-200 uppercase tracking-widest text-sm font-bold mb-2">What We Do</p>
+        <h1 class="font-headline font-black text-5xl mb-3">Our Services</h1>
+        <p class="text-red-100 text-lg max-w-2xl">From routine maintenance to complex repairs — we handle it all for Staten Island drivers.</p>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <article class="card"><h3>Engine Diagnostics</h3><p>Pinpoint engine issues fast with professional diagnostic equipment. We read the codes and tell you exactly what your vehicle needs.</p></article>
+        <article class="card"><h3>NY State Inspection</h3><p>Certified New York State inspections performed quickly and thoroughly. Get your sticker and get back on the road.</p></article>
+        <article class="card"><h3>Brake Service</h3><p>Full brake inspections, pad replacement, rotor resurfacing and replacement.</p></article>
+        <article class="card"><h3>Oil Change</h3><p>Fast, clean oil and filter changes using the right oil for your vehicle.</p></article>
+        <article class="card"><h3>A/C Repair</h3><p>Diagnose and repair air conditioning issues including recharge and compressor service.</p></article>
+        <article class="card"><h3>Tire Service</h3><p>Flat tire repair, tire rotation, and tire replacement.</p></article>
+        <article class="card"><h3>Radiator Flush</h3><p>Coolant system flush and fill to prevent overheating and extend engine life.</p></article>
+        <article class="card"><h3>Transmission Service</h3><p>Transmission fluid service, filter replacement, and diagnostics.</p></article>
+        <article class="card"><h3>Tune-Up &amp; Maintenance</h3><p>Spark plugs, filters, belts, and fluids to keep your vehicle running at its best.</p></article>
+        <article class="card"><h3>General Auto Repair</h3><p>Comprehensive repairs for most makes and models. If something is wrong, call us.</p></article>
+      </div>
+    </section>
+
+    <section class="bg-brand-red py-14 px-4">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="font-headline font-black text-4xl mb-4">Don't See Your Service Listed?</h2>
+        <p class="text-red-100 text-lg mb-8">We handle most makes and models. Call us today and describe the issue — chances are we can help.</p>
+        <a href="tel:+17185550000" class="inline-block bg-white text-brand-red px-8 py-4 rounded-md font-bold uppercase tracking-wide">Call (718) 555-0000</a>
+      </div>
+    </section>
+  </body>
+</html>

@@ -3,66 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary SEO -->
-    <title>Master Auto Mechanic | Auto Repair in Staten Island, NY</title>
-    <meta name="description" content="Trusted auto repair shop in Staten Island, NY. Engine diagnostics, NY State inspections, brake service, oil changes, A/C repair, and more. Call today." />
-    <meta name="keywords" content="auto repair Staten Island, mechanic Staten Island, brake service Staten Island, oil change Staten Island, NY State inspection Staten Island" />
-    <link rel="canonical" href="https://masterautomechanic.com" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://masterautomechanic.com" />
-    <meta property="og:title" content="Master Auto Mechanic | Auto Repair in Staten Island, NY" />
-    <meta property="og:description" content="Trusted auto repair shop in Staten Island, NY. Engine diagnostics, NY State inspections, brake service, oil changes, A/C repair, and more. Call today." />
-    <meta property="og:image" content="https://masterautomechanic.com/img/MasterAutoMechanic.jpg" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Master Auto Mechanic | Auto Repair in Staten Island, NY" />
-    <meta name="twitter:description" content="Trusted auto repair shop in Staten Island, NY. Engine diagnostics, NY State inspections, brake service, oil changes, A/C repair, and more." />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
-
-    <!-- Google Fonts -->
+    <title>Master Auto Mechanic | Home</title>
+    <meta name="description" content="Trusted auto repair in Staten Island, NY. Diagnostics, inspections, brake service, oil changes, A/C repair, and more." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Master Auto Mechanic",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "20 Giffords Glen",
-        "addressLocality": "Staten Island",
-        "addressRegion": "NY",
-        "postalCode": "10308",
-        "addressCountry": "US"
-      },
-      "telephone": "(718) 555-0000",
-      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-15:00"],
-      "url": "https://masterautomechanic.com",
-      "image": "https://masterautomechanic.com/img/MasterAutoMechanic.jpg",
-      "priceRange": "$$"
-    }
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      const redirect = sessionStorage.getItem('redirect');
-      if (redirect) {
-        sessionStorage.removeItem('redirect');
-        window.history.replaceState(null, null, redirect);
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-red': '#B91C1C',
+              'brand-blue': '#1E3A8A',
+              'brand-yellow': '#F59E0B'
+            },
+            fontFamily: {
+              headline: ['Barlow Condensed', 'sans-serif'],
+              body: ['Inter', 'sans-serif']
+            }
+          }
+        }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DSRyVxDu.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkYVn1Vf.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="font-body bg-white text-gray-800">
+    <header class="bg-gray-900 text-white sticky top-0 z-20">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-headline text-3xl font-black tracking-wide">Master Auto Mechanic</a>
+        <div class="flex gap-5 text-sm sm:text-base font-semibold">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="relative min-h-[560px] flex items-center" style="background-image:url('img/MasterAutoMechanic.jpg'); background-size:cover; background-position:center top;">
+      <div class="absolute inset-0 bg-white/75"></div>
+      <div class="relative max-w-6xl mx-auto px-4 py-20 w-full">
+        <p class="text-brand-red uppercase tracking-widest text-sm font-bold mb-3">Staten Island, NY</p>
+        <h1 class="font-headline font-black text-5xl leading-none text-gray-900 mb-5 max-w-2xl">Trusted Auto Repair in Staten Island</h1>
+        <p class="text-lg text-gray-700 max-w-2xl mb-7">From diagnostics and inspections to brakes, oil changes, A/C service, and maintenance — Master Auto Mechanic keeps Staten Island drivers safely on the road.</p>
+        <a href="tel:+17185550000" class="inline-block bg-brand-red text-white px-8 py-4 rounded-md font-bold uppercase tracking-wide">Call (718) 555-0000</a>
+        <p class="mt-5 text-sm text-gray-600">20 Giffords Glen, Staten Island, NY 10308 · Monday – Friday: 8:00 AM – 6:00 PM</p>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="font-headline font-black text-4xl mb-6">Services That Keep You Moving</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="card"><h3>Engine Diagnostics</h3><p>Pinpoint engine issues fast with professional diagnostic equipment.</p></article>
+        <article class="card"><h3>NY State Inspection</h3><p>Certified New York State inspections performed quickly and thoroughly.</p></article>
+        <article class="card"><h3>Brake Service</h3><p>Full brake inspections, pad replacement, and rotor work.</p></article>
+        <article class="card"><h3>Oil Change</h3><p>Fast, clean oil and filter changes using the right oil for your vehicle.</p></article>
+        <article class="card"><h3>A/C Repair</h3><p>Diagnose and repair air conditioning issues including leak repair.</p></article>
+        <article class="card"><h3>Tire Service</h3><p>Flat tire repair, tire rotation, and tire replacement.</p></article>
+      </div>
+      <a href="services.html" class="mt-6 inline-block font-bold text-brand-red">View All Services →</a>
+    </section>
+
+    <section class="bg-gray-50 border-y border-gray-200 py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-headline font-black text-4xl mb-6">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <article class="card"><h3>Mike D.</h3><p class="stars">★★★★★</p><p>Brought my car in for brakes and an inspection. Fast, honest pricing, no surprises.</p></article>
+          <article class="card"><h3>Lisa R.</h3><p class="stars">★★★★★</p><p>Best mechanic on Staten Island. They explained everything clearly and the price was fair.</p></article>
+          <article class="card"><h3>Tony S.</h3><p class="stars">★★★★★</p><p>My whole family uses Master Auto. Reliable and they stand behind their work.</p></article>
+          <article class="card"><h3>Karen M.</h3><p class="stars">★★★★★</p><p>Needed an emergency repair and they fit me in same day. Great service.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-red py-16 px-4">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="font-headline font-black text-5xl mb-4">Ready to Get Your Car Fixed?</h2>
+        <p class="text-red-100 text-lg mb-8">Call us today — no forms, no waiting. Just reliable auto repair from a team you can trust.</p>
+        <a href="tel:+17185550000" class="inline-block bg-white text-brand-red px-8 py-4 rounded-md font-bold uppercase tracking-wide">Call Now</a>
+      </div>
+    </section>
   </body>
 </html>
