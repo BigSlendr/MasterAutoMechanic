@@ -3,66 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Learn about Master Auto Mechanic, a trusted Staten Island auto repair shop focused on quality workmanship and honest communication."
-    />
-    <meta property="og:title" content="About | Master Auto Mechanic" />
-    <meta property="og:description" content="Trusted repairs and straightforward service for Staten Island drivers." />
+    <title>Master Auto Mechanic | About</title>
+    <meta name="description" content="Learn about Master Auto Mechanic, a locally owned Staten Island auto repair shop focused on honest service and skilled repairs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { 'brand-red': '#B91C1C', 'brand-blue': '#1E3A8A' }, fontFamily: { headline: ['Barlow Condensed', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
     <link rel="stylesheet" href="styles.css" />
-    <script id="local-business-schema" type="application/ld+json"></script>
-    <title>About | Master Auto Mechanic</title>
   </head>
-  <body data-page-title="About">
-    <div class="site-header-wrap"><header id="site-header" class="container"></header></div>
-    <main>
-      <section class="hero container">
-        <p class="eyebrow">Trusted Local Shop</p>
-        <h1>Built on Craftsmanship, Integrity, and Local Trust</h1>
-        <p>
-          We combine dependable service, experienced workmanship, and straightforward communication to give
-          Staten Island drivers confidence every time they visit.
-        </p>
-      </section>
-
-      <section class="section section-light">
-        <div class="container grid-2">
-          <article class="contact-card reveal">
-            <h2>What We Stand For</h2>
-            <p>
-              Our shop is centered around quality workmanship, honest recommendations, and responsive service.
-              Every customer gets clear updates and practical repair guidance.
-            </p>
-          </article>
-          <article class="contact-card reveal">
-            <h2>Why Customers Return</h2>
-            <p>
-              Staten Island families and commuters choose us for consistent results, respectful communication,
-              and repairs done right the first time whenever possible.
-            </p>
-          </article>
+  <body class="font-body bg-white text-gray-800">
+    <header class="bg-gray-900 text-white sticky top-0 z-20">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-headline text-3xl font-black tracking-wide">Master Auto Mechanic</a>
+        <div class="flex gap-5 text-sm sm:text-base font-semibold">
+          <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="services.html">Services</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a>
         </div>
-      </section>
+      </nav>
+    </header>
 
-      <section class="section container">
-        <h2 class="section-title">Auto Repair Done Right</h2>
-        <div class="grid-3">
-          <article class="dark-block reveal"><h3>Experienced Team</h3><p>Skilled technicians who diagnose issues accurately and recommend only what you need.</p></article>
-          <article class="dark-block reveal"><h3>Clear Communication</h3><p>We explain repairs in plain language so you can make informed, confident decisions.</p></article>
-          <article class="dark-block reveal"><h3>Road-Ready Results</h3><p>Our mission is simple: keep your vehicle safe, smooth, and dependable every day.</p></article>
-        </div>
-      </section>
+    <section class="relative min-h-[340px] flex items-end" style="background-image:url('img/MasterAutoMechanic.jpg'); background-size:cover; background-position:center top;">
+      <div class="absolute inset-0 bg-white/70"></div>
+      <div class="relative max-w-6xl mx-auto px-4 pb-12 pt-20 w-full">
+        <p class="text-brand-red uppercase tracking-widest text-sm font-bold mb-2">Our Story</p>
+        <h1 class="font-headline font-black text-5xl text-gray-900">About Master Auto Mechanic</h1>
+      </div>
+    </section>
 
-      <section class="section section-light">
-        <div class="container">
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <div id="faq-list"></div>
-          <p style="margin-top:1.2rem"><a class="btn btn-primary" href="contact.html">Schedule Service With Confidence</a></p>
+    <section class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+      <div class="lg:col-span-3 space-y-4 text-gray-700 leading-relaxed">
+        <p class="text-lg">Master Auto Mechanic is a locally owned and operated auto repair shop serving Staten Island, NY. We are not a chain and we are not a franchise — we are mechanics who live and work in this community.</p>
+        <p>We have built a reputation for doing the job right and treating customers with respect. You will never see charges on your bill that were not discussed first.</p>
+        <p>Our shop handles most makes and models — American, European, Asian, older classics, and newer vehicles with modern electronics.</p>
+        <p>We work on everything from routine oil changes and NY State inspections to brake jobs, diagnostics, A/C service, transmission work, and general repairs.</p>
+      </div>
+      <div class="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+        <img src="img/MasterAutoMechanic2.jpg" alt="Master Auto Mechanic exterior" class="w-full h-full object-cover" />
+      </div>
+    </section>
+
+    <section class="bg-gray-50 border-y border-gray-200 py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-headline font-black text-4xl mb-8">What You Can Expect From Us</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <article class="card"><h3>Honest Estimates</h3><p>We tell you exactly what needs to be done and what it costs before we touch your vehicle.</p></article>
+          <article class="card"><h3>Experienced Technicians</h3><p>We have the experience and tools to diagnose and fix foreign, domestic, older, and newer vehicles.</p></article>
+          <article class="card"><h3>Fast Turnaround</h3><p>We work efficiently without cutting corners and complete same-day repairs whenever possible.</p></article>
+          <article class="card"><h3>Clear Communication</h3><p>We explain repairs in plain language so you never feel confused or pressured.</p></article>
         </div>
-      </section>
-    </main>
-    <footer class="container" id="site-footer"></footer>
-    <div class="mobile-cta" id="mobile-cta"></div>
-    <script type="module" src="app.js"></script>
+      </div>
+    </section>
+
+    <section class="bg-brand-red py-14 px-4">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="font-headline font-black text-4xl mb-4">Call to Schedule Your Repair</h2>
+        <p class="text-red-100 text-lg mb-8">Give us a call and tell us what is going on with your vehicle. We will take it from there.</p>
+        <a href="tel:+17185550000" class="inline-block bg-white text-brand-red px-8 py-4 rounded-md font-bold uppercase tracking-wide">Call (718) 555-0000</a>
+      </div>
+    </section>
   </body>
 </html>

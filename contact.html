@@ -3,80 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact Master Auto Mechanic in Staten Island for diagnostics, inspections, brake service, and general auto repair."
-    />
-    <meta property="og:title" content="Contact | Master Auto Mechanic" />
-    <meta property="og:description" content="Call or request service with Staten Island's trusted local mechanic team." />
-    <link rel="stylesheet" href="styles.css" />
-    <script id="local-business-schema" type="application/ld+json"></script>
-    <title>Contact | Master Auto Mechanic</title>
-  </head>
-  <body data-page-title="Contact">
-    <div class="site-header-wrap"><header id="site-header" class="container"></header></div>
-    <main>
-      <section class="hero container">
-        <p class="eyebrow">Schedule Service With Confidence</p>
-        <h1>Contact Your Staten Island Mechanic Team</h1>
-        <p>
-          Call for immediate help or send a request online. We’ll follow up quickly to confirm your service,
-          answer questions, and get you back on the road.
-        </p>
-      </section>
-
-      <section class="section section-light">
-        <div class="container grid-2">
-          <article class="contact-card reveal">
-            <h2>Visit or Call</h2>
-            <p><strong data-business-name></strong></p>
-            <p><span data-address-line1></span><br/><span data-city-state-zip></span></p>
-            <p><a data-phone-link></a></p>
-            <p><a data-email-link></a></p>
-            <ul class="hours-list" id="hours-list"></ul>
-            <p style="margin-top:1rem"><a class="btn btn-primary" data-map-link target="_blank" rel="noopener noreferrer">Get Directions</a></p>
-          </article>
-
-          <article class="dark-block reveal">
-            <h2>Request Service</h2>
-            <form id="request-form" novalidate>
-              <div class="form-grid">
-                <label>Name<input type="text" name="name" autocomplete="name" required /></label>
-                <label>Phone<input type="tel" name="phone" autocomplete="tel" required /></label>
-                <label>Email<input type="email" name="email" autocomplete="email" required /></label>
-                <label>Vehicle Make/Model<input type="text" name="vehicle" required /></label>
-                <label>Service Needed
-                  <select id="service-needed" name="service" required>
-                    <option value="">Select a service</option>
-                  </select>
-                </label>
-                <label>Preferred Date<input type="date" name="preferredDate" /></label>
-              </div>
-              <label>Message<textarea name="message" placeholder="Tell us about any symptoms, warning lights, or concerns."></textarea></label>
-              <button type="submit" class="btn btn-primary">Request Service</button>
-              <p id="form-notice" aria-live="polite"></p>
-            </form>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container">
-        <div class="dark-block reveal">
-          <h2>Map Placeholder</h2>
-          <p>Embed your preferred map provider here for direct in-page directions and location confirmation.</p>
-          <p><a class="btn btn-outline" data-map-link target="_blank" rel="noopener noreferrer">Open in Maps</a></p>
-        </div>
-      </section>
-    </main>
-    <footer class="container" id="site-footer"></footer>
-    <div class="mobile-cta" id="mobile-cta"></div>
-
-    <script type="module" src="app.js"></script>
-    <script type="module">
-      import { siteConfig } from './data/siteConfig.js';
-      document.querySelectorAll('[data-phone-link]').forEach((el) => {
-        if (!el.textContent.trim()) el.textContent = siteConfig.phoneDisplay;
-      });
+    <title>Master Auto Mechanic | Contact</title>
+    <meta name="description" content="Contact Master Auto Mechanic in Staten Island by phone or stop by during business hours." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { 'brand-red': '#B91C1C', 'brand-blue': '#1E3A8A' }, fontFamily: { headline: ['Barlow Condensed', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
     </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-body bg-white text-gray-800">
+    <header class="bg-gray-900 text-white sticky top-0 z-20">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-headline text-3xl font-black tracking-wide">Master Auto Mechanic</a>
+        <div class="flex gap-5 text-sm sm:text-base font-semibold">
+          <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="services.html">Services</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="bg-brand-red py-14 px-4 text-white">
+      <div class="max-w-6xl mx-auto">
+        <p class="text-red-200 uppercase tracking-widest text-sm font-bold mb-2">Reach Us</p>
+        <h1 class="font-headline font-black text-5xl mb-3">Contact Us</h1>
+        <p class="text-red-100 text-lg max-w-2xl">The fastest way to reach us is by phone. Call now and we will get you taken care of.</p>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-14 text-center border-b border-gray-200">
+      <h2 class="font-headline font-black text-4xl mb-2">Give Us a Call</h2>
+      <p class="text-gray-600 mb-4">No forms, no waiting — just call.</p>
+      <a href="tel:+17185550000" class="text-brand-red font-headline text-5xl font-black">(718) 555-0000</a>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="card">
+        <h3>Address</h3>
+        <p>20 Giffords Glen, Staten Island, NY 10308</p>
+        <a href="https://maps.google.com/?q=20+Giffords+Glen+Staten+Island+NY+10308" class="text-brand-blue font-semibold" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+      </article>
+      <article class="card">
+        <h3>Hours</h3>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><strong>Monday – Friday:</strong> 8:00 AM – 6:00 PM</li>
+          <li><strong>Saturday:</strong> 8:00 AM – 3:00 PM</li>
+          <li><strong>Sunday:</strong> Closed</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Phone</h3>
+        <p><a href="tel:+17185550000" class="text-brand-red font-bold text-xl">(718) 555-0000</a></p>
+        <p>Call during business hours for service, estimates, or questions about your vehicle.</p>
+      </article>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 pb-16">
+      <div class="bg-gray-100 rounded-2xl border border-gray-200 text-center py-16 px-4">
+        <h3 class="font-headline font-black text-3xl mb-3">20 Giffords Glen, Staten Island, NY 10308</h3>
+        <p class="text-gray-600 mb-5">Parking is available on-site. Walk-ins welcome during regular business hours.</p>
+        <a href="https://maps.google.com/?q=20+Giffords+Glen+Staten+Island+NY+10308" class="inline-block bg-brand-blue text-white px-6 py-3 rounded-md font-bold uppercase tracking-wide" target="_blank" rel="noopener noreferrer">Get Directions</a>
+      </div>
+    </section>
   </body>
 </html>
