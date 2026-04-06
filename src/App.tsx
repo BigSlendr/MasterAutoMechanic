@@ -37,7 +37,7 @@ function Layout() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/MasterAutoMechanic/">
+    <BrowserRouter>
       <Layout />
     </BrowserRouter>
   )
